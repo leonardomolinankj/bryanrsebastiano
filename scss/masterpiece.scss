@@ -1,0 +1,10 @@
+#masterpiece {
+  h2 {
+    padding-left: 60px;
+    padding-top: 16px;
+    padding-bottom: 11px;
+    &:after {
+      width: calc(100% - 6px);
+    }
+  }
+}

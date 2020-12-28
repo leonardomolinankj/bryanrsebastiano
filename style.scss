@@ -1,0 +1,44 @@
+/* Variables */
+$primary-color: #39b5c1;
+$secodary-color: #272727;
+$white: #eaeaea;
+$black: #1f1f1f;
+$light-gray: #d8d8d8;
+$medium-gray: #a7a7a7;
+$medium-light-gray: #535353;
+$dark-gray: #3a3a3a;
+$light-bluegreen: #244a4c;
+$medium-bluegreen: #255154;
+$dark-bluegreen: #173032;
+$yellow: #e5c219;
+
+$primary-font: 'Nunito', sans-serif;
+$secondary-font: 'Proza Libre', sans-serif;
+
+$push-left: 300px;
+
+/* Breakpoints */
+$max-large: 1200px;
+$min-large: 1201px;
+$max-medium: 990px;
+$min-medium: 991px;
+$max-small: 767px;
+$min-small: 768px;
+
+/* Mixins */
+@mixin transition {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+@mixin d_inline_block( $alignment ) {
+  display: inline-block;
+  vertical-align: $alignment;
+}
+
+@import 'scss/html';
+@import 'scss/global';
+@import 'scss/sidebar';
+@import 'scss/about';
+@import 'scss/experience';
+@import 'scss/skills';
+@import 'scss/masterpiece';

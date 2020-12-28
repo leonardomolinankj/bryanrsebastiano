@@ -1,0 +1,78 @@
+.b-text-center {
+  text-align: center;
+}
+.b-transition {
+  @include transition;
+}
+.b-btn {
+  display: table;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 7px;
+  margin: auto;
+  font-size: 16px;
+  border: 1px solid $secodary-color;
+}
+.b-btn-solid-dark {
+  background: $secodary-color;
+  color: $medium-gray;
+  @include transition;
+  i {
+    color: $dark-bluegreen;
+    @include transition;
+  }
+  &:hover {
+    color: $white;
+    background: $black;
+    border-color: $black;
+    i {
+      color: $primary-color;
+    }
+  }
+}
+.b-row {
+  display: flex;
+  .b-column {
+    flex: 1;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  & > * {
+    transition-duration: 200ms;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(.6,.15,.35,.8);
+  }
+}
+
+$delay: 100ms;
+$delayStep: 100ms;
+
+.fade-enter,
+.fade-leave-to {
+  & > * {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+.fade-enter-active {
+  & > * {
+    &:nth-child(2) {
+      transition-delay: $delay;
+    }
+    &:nth-child(3) {
+      transition-delay: $delay + $delayStep;
+    }
+  }
+}
+.fade-leave-active {
+  & > * {
+    &:nth-child(1) {
+      transition-delay: $delay + $delayStep;
+    }
+    &:nth-child(2) {
+      transition-delay: $delay;
+    }
+  }
+}

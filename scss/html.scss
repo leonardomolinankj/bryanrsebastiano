@@ -1,0 +1,70 @@
+html, body, main {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: $dark-gray;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $light-gray;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $secondary-font;
+  font-weight: 700;
+  margin: 0;
+}
+hr {
+  border: 0;
+  border-bottom: 1px solid $medium-light-gray;
+}
+img {
+  max-width: 100%;
+}
+main {
+  position: relative;
+  padding-left: $push-left;
+  @include transition;
+  &.b-toggle {
+    padding-left: 64px;
+  }
+  @media ( max-width: $max-medium ) {
+    padding-left: 64px !important;
+  }
+}
+section {
+  padding: 30px 75px 70px 60px;
+  max-width: 1500px;
+  margin: auto;
+  @media ( max-width: $max-large ) {
+    padding-left: 30px;
+    padding-right: 45px;
+  }
+  @media ( max-width: $max-small ) {
+    padding-left: 15px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+  }
+  h2 {
+    font-family: $primary-font;
+    color: $white;
+    margin: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: $medium-gray;
+    }
+    .b-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}

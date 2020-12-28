@@ -1,0 +1,161 @@
+aside {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: $push-left;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: $primary-color;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  @include transition;
+  @media ( max-width: $max-small ) {
+    max-width: 250px;
+  }
+  .b-image {
+    padding: 20px 20px 0;
+    @include transition;
+    img {
+      border-radius: 50%;
+      max-width: 150px;
+      display: block;
+      margin: auto;
+      padding: 5px;
+      cursor: pointer;
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+      @include transition;
+      @media ( max-width: $max-small ) {
+        max-width: 100px;
+      }
+    }
+    h1 {
+      color: $black;
+      font-size: 30px;
+      margin: 20px 0;
+      @include transition;
+      @media ( max-width: $max-small ) {
+        font-size: 24px;
+      }
+    }
+  }
+  .b-menu {
+    a {
+      display: block;
+      margin: 0;
+      padding: 15px 20px;
+      color: $medium-gray;
+      text-decoration: none;
+      border-top: 1px solid $light-bluegreen;
+      background: $dark-bluegreen;
+      line-height: 1;
+      letter-spacing: 1px;
+      cursor: pointer;
+      @include transition;
+      &.b-active,
+      &:hover {
+        background: $medium-bluegreen;
+        color: $white;
+      }
+      &.b-active {
+        pointer-events: none;
+      }
+      &:last-child {
+        padding: 21px 20px;
+        background-color: $secodary-color;
+        color: $medium-gray;
+        @media ( max-width: $max-medium ) {
+          background-color: $black;
+        }
+        &:hover {
+          background-color: $black;
+          color: $white;
+          i {
+            color: $primary-color;
+          }
+        }
+        i {
+          margin-left: 5px;
+          margin-right: 0;
+          color: $medium-bluegreen;
+          font-size: 18px;
+          @media ( max-width: $max-medium ) {
+            color: $primary-color;
+          }
+        }
+      }
+      .b-icon {
+        margin-left: 0;
+      }
+      span {
+        font-size: 16px;
+        @include transition;
+      }
+      i {
+        margin-right: 5px;
+        @include transition;
+      }
+    }
+  }
+  .b-toggle-btn {
+    background: $secodary-color;
+    padding: 5px;
+    border-radius: 2px;
+    display: table;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      background: $black;
+    }
+  }
+}
+
+.b-toggle {
+  aside {
+    max-width: 64px;
+    .b-image {
+      padding: 20px 0;
+      img {
+        max-width: 35px;
+      }
+      h1 {
+        font-size: 0;
+        margin: 0;
+      }
+    }
+    .b-menu {
+      a {
+        padding: 10px;
+        padding-bottom: 7px;
+        line-height: 0;
+        &:last-child {
+          padding: 19px 10px;
+          text-align: center;
+        }
+        .b-icon {
+          width: 40px !important;
+          height: 40px !important;
+          margin-left: 2px;
+        }
+        span {
+          font-size: 0;
+        }
+        i {
+          font-size: 22px;
+          margin-left: 3px;
+        }
+      }
+    }
+    .b-toggle-btn {
+      margin-right: 12px;
+      text-align: center;
+    }
+  }
+}

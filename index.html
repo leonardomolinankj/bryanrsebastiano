@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173032">
+  <link rel="icon" href="imgs/Bryan-Sebastian-favicon.jpg" type="image/x-icon" />
+  <title>Hello, I'm Bryan!</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&family=Proza+Libre&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <main id="portfolio" :class="{ 'b-toggle' : toggle_menu }">
+    <aside>
+      <div class="b-image">
+        <img src="imgs/Bryan-Sebastian.jpg" alt="Bryan R. Sebastian" @click="changeSection( 'about', $event )" class="b-transition">
+        <h1 class="b-text-center">Hello, I'm Bryan!</h1>
+      </div>
+      <nav class="b-menu">
+        <a v-for="( value, index ) in menu" :href="'#' + index" :class="{ 'b-active' : active_section == index }" @click="changeSection( index, $event )">
+          <lord-icon class="b-icon" :src="value.icon" trigger="click" colors="primary:#eaeaea,secondary:#39b5c1" style="width:30px;height:30px"></lord-icon>
+          <span>{{ value.label }}</span>
+        </a>
+        <a :href="resume_link" target="_blank">
+          <span>Download Resume</span>
+          <i class="fas fa-cloud-download-alt"></i>
+        </a>
+      </nav>
+      <span class="b-toggle-btn" @click="toggle_menu = !toggle_menu">
+        <lord-icon src="https://cdn.lordicon.com/qvzrpodt.json" trigger="click" colors="primary:#eaeaea,secondary:#39b5c1" style="width:32px;height:32px"></lord-icon>
+      </span>
+    </aside>
+    <transition-group name="fade" mode="out-in" appear :duration="500" >
+      <section id="about" :key="'about'" v-if="active_section == 'about'">
+        <h2>
+          <lord-icon class="b-icon" :src="menu.about.icon" trigger="loop" delay="5000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
+          <span>{{ menu.about.label }}</span>
+        </h2>
+        <div class="b-content">
+          <div class="b-row">
+            <div class="b-column">
+              <div class="b-about">
+                <h3>I'm a Full Stack Web Developer and<br>sometimes Web Designer from Bulacan, Philippines.</h3>
+                <p>I love the logic and structure of coding and always solve to write elegant and efficient code whether it be HTML, CSS, JS, or PHP.</p>
+                <p>I also enjoy taking complex problems and turning them into simple and beautiful interface designs.</p>
+                <p>When I'm not coding or exploring some web design, you'll find me in the mall playing arcade or chilling in riverside, but most of the time is on my cave, playing some video games. <i class="far fa-laugh-beam"></i></p>
+                <hr>
+                <div class="b-educ">
+                  <h4><i class="fas fa-user-graduate"></i> EDUCATION</h4>
+                  <div>
+                    <div v-for="item in education" class="b-item">
+                      <i class="fas fa-caret-right"></i>
+                      <h5>{{ item.course }}</h5>
+                      <p>{{ item.school }}</p>
+                      <p>{{ item.location }}</p>
+                      <ul>
+                        <li v-for="detail in item.details">{{ detail }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="b-column">
+              <div class="b-achievements">
+                <hr>
+                <h4><i class="fas fa-award"></i> ACHIEVEMENTS</h4>
+                <div>
+                  <div v-for="item in achievements" class="b-item">
+                    <i class="fas fa-caret-right"></i>
+                    <h5>{{ item.title }}</h5>
+                    <p>{{ item.org }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="experience" :key="'experience'" v-if="active_section == 'experience'">
+        <h2>
+          <lord-icon class="b-icon" :src="menu.experience.icon" trigger="loop" delay="5000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
+          <span>{{ menu.experience.label }}</span>
+        </h2>
+        <div class="b-content">
+          <div v-for="item in experience" class="b-row">
+            <div class="b-years b-column">
+              <h4>{{ item.year }}<h4>
+            </div>
+            <div class="b-details b-column">
+              <h4>{{ item.year }}</h4>
+              <h3>{{ item.company }}</h3>
+              <p>{{ item.position }}</p>
+              <p>{{ item.address }}</p>
+              <ul>
+                <li v-for="detail in item.details">{{ detail }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skills" :key="'skills'" v-if="active_section == 'skills'">
+        <h2>
+          <lord-icon class="b-icon" :src="menu.skills.icon" trigger="loop" delay="5000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
+          <span>{{ menu.skills.label }}</span>
+        </h2>
+      </section>
+      <section id="masterpiece" :key="'masterpiece'" v-if="active_section == 'masterpiece'">
+        <h2>
+          <lord-icon class="b-icon" :src="menu.masterpiece.icon" trigger="loop" delay="5000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
+          <span>{{ menu.masterpiece.label }}</span>
+        </h2>
+      </section>
+    </transition-group>
+  </main>
+</body>
+</html>

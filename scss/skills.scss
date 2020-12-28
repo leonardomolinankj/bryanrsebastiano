@@ -1,0 +1,10 @@
+#skills {
+  h2 {
+    padding-left: 55px;
+    padding-top: 11px;
+    padding-bottom: 6px;
+    &:after {
+      width: calc(100% - 13px);
+    }
+  }
+}
