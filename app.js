@@ -10,7 +10,7 @@ var portfolio = new Vue( {
   data: function() {
     return {
       toggle_menu: false,
-      active_section: 'experience',
+      active_section: 'about',
       resume_link: 'https://drive.google.com/file/d/11uQv_W9xfrh65EMpEpRN27jk6VQt1h45/view?usp=sharing',
       menu: menu_data,
       education: educ_data,

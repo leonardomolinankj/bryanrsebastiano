@@ -177,6 +177,7 @@ aside {
 @media (max-width: 767px) {
   aside {
     max-width: 250px;
+    height: calc(100% + 100px);
   }
 }
 aside .b-image {
