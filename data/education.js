@@ -5,7 +5,7 @@ export default {
     'location' : 'City of Malolos, Bulacan',
     'details' : {
       0 : "From 2nd year to 5th year I'm always a leader of the team",
-      1 : 'Awared our thesis as 2nd Best Thesis entitled "Home Automation with File Sharing controlled thru Webpage"'
+      1 : 'Awarded our thesis as 2nd Best Thesis entitled "Home Automation with File Sharing controlled thru Webpage"'
     }
   }
 }
