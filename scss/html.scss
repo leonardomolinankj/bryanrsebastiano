@@ -40,9 +40,7 @@ section {
     padding-right: 45px;
   }
   @media ( max-width: $max-small ) {
-    padding-left: 15px;
-    padding-right: 30px;
-    padding-bottom: 50px;
+    padding: 15px 15px 30px 5px;
   }
   h2 {
     font-family: $primary-font;
@@ -52,6 +50,9 @@ section {
     text-transform: uppercase;
     position: relative;
     margin-bottom: 20px;
+    @media ( max-width: $max-small ) {
+      letter-spacing: 2px;
+    }
     &:after {
       content: "";
       display: block;

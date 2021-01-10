@@ -56,9 +56,7 @@ section {
 }
 @media (max-width: 767px) {
   section {
-    padding-left: 15px;
-    padding-right: 30px;
-    padding-bottom: 50px;
+    padding: 15px 15px 30px 5px;
   }
 }
 section h2 {
@@ -69,6 +67,11 @@ section h2 {
   text-transform: uppercase;
   position: relative;
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  section h2 {
+    letter-spacing: 2px;
+  }
 }
 section h2:after {
   content: "";
@@ -352,6 +355,12 @@ aside .b-toggle-btn:hover {
   font-size: 24px;
   letter-spacing: 2px;
   line-height: 1.3;
+}
+@media (max-width: 767px) {
+  #about .b-content h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
 }
 #about .b-content p i {
   color: #e5c219;
