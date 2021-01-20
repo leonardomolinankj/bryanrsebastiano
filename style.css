@@ -134,6 +134,22 @@ section h2 .b-icon {
   flex: 1;
 }
 
+.b-section-title {
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  padding-left: 25px;
+}
+.b-section-title i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #39b5c1;
+}
+
 .fade-enter-active > *,
 .fade-leave-active > * {
   transition-duration: 200ms;
@@ -364,21 +380,6 @@ aside .b-toggle-btn:hover {
 }
 #about .b-content p i {
   color: #e5c219;
-}
-#about .b-content h4 {
-  margin-top: 20px;
-  font-size: 18px;
-  letter-spacing: 5px;
-  font-family: "Nunito", sans-serif;
-  position: relative;
-  padding-left: 25px;
-}
-#about .b-content h4 i {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #39b5c1;
 }
 @media (min-width: 1201px) {
   #about .b-content .b-about {
