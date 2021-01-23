@@ -51,7 +51,7 @@
                 <p>When I'm not coding or exploring some web design, you'll find me in the mall playing arcade or chilling in riverside, but most of the time is on my cave, playing some video games. <i class="far fa-laugh-beam"></i></p>
                 <hr>
                 <div class="b-educ">
-                  <h4><i class="fas fa-user-graduate"></i> EDUCATION</h4>
+                  <h4 class="b-section-title"><i class="fas fa-user-graduate"></i> EDUCATION</h4>
                   <div>
                     <div v-for="item in education" class="b-item">
                       <i class="fas fa-caret-right"></i>
@@ -69,7 +69,7 @@
             <div class="b-column">
               <div class="b-achievements">
                 <hr>
-                <h4><i class="fas fa-award"></i> ACHIEVEMENTS</h4>
+                <h4 class="b-section-title"><i class="fas fa-award"></i> ACHIEVEMENTS</h4>
                 <div>
                   <div v-for="item in achievements" class="b-item">
                     <i class="fas fa-caret-right"></i>
@@ -109,6 +109,31 @@
           <lord-icon class="b-icon" :src="menu.skills.icon" trigger="loop" delay="3000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
           <span>{{ menu.skills.label }}</span>
         </h2>
+        <div class="b-content">
+          <div class="b-tools">
+            <div class="b-heading">
+              <h4 class="b-section-title"><i class="fas fa-tools"></i>DEVELOPMENT TOOLS</h4>
+              <p>Different tools that I'm using on developing a project.</p>
+            </div>
+            <pre>Box with vertical percent in left side. Number of years in bottom. Icon with name.</pre>
+          </div>
+          <hr>
+          <div class="b-cap">
+            <div class="b-heading">
+              <h4 class="b-section-title"><i class="fas fa-user-cog"></i>PERSONAL CAPABILITIES</h4>
+              <p>Level of my skills on how I can manage a difficult tasks and multiple projects.</p>
+            </div>
+            <pre>Unordered list of personal doing.</pre>
+          </div>
+          <hr>
+          <div class="b-other">
+            <div class="b-heading">
+              <h4 class="b-section-title"><i class="fas fa-bookmark"></i>OTHER INTERESTS</h4>
+              <p>Skills that I've experienced for the short period of time but I have an interest to learn it.</p>
+            </div>
+            <pre>Circular logo of skills</pre>
+          </div>
+        </div>
       </section>
       <section id="masterpiece" :key="'masterpiece'" v-if="active_section == 'masterpiece'">
         <h2>

@@ -543,6 +543,27 @@ aside .b-toggle-btn:hover {
 #skills h2:after {
   width: calc(100% - 13px);
 }
+#skills .b-heading {
+  padding-left: 13px;
+}
+#skills .b-heading .b-section-title,
+#skills .b-heading p {
+  padding-left: 30px;
+}
+#skills .b-heading p {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+#skills hr {
+  width: calc(100% - 13px);
+  margin-right: 0;
+}
+#skills .b-tools .b-section-title i {
+  left: 1px;
+}
+#skills .b-other .b-section-title i {
+  left: 3px;
+}
 
 #masterpiece h2 {
   padding-left: 60px;

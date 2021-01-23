@@ -7,4 +7,38 @@
       width: calc(100% - 13px);
     }
   }
+  .b-heading {
+    padding-left: 13px;
+    .b-section-title,
+    p {
+      padding-left: 30px;
+    }
+    .b-section-title {
+      i {
+
+      }
+    }
+    p {
+      margin-bottom: 0;
+      margin-top: 5px;
+    }
+  }
+  hr {
+    width: calc(100% - 13px);
+    margin-right: 0;
+  }
+  .b-tools {
+    .b-section-title {
+      i {
+        left: 1px;
+      }
+    }
+  }
+  .b-other {
+    .b-section-title {
+      i {
+        left: 3px;
+      }
+    }
+  }
 }
