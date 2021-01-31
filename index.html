@@ -123,7 +123,9 @@
               <h4 class="b-section-title"><i class="fas fa-user-cog"></i>PERSONAL CAPABILITIES</h4>
               <p>Level of my skills on how I can manage a difficult tasks and multiple projects.</p>
             </div>
-            <pre>Unordered list of personal doing.</pre>
+            <ul>
+              <li v-for="cap in skills.capabilities"><i class="fas fa-chevron-right"></i>{{ cap }}</li>
+            </ul>
           </div>
           <hr>
           <div class="b-other">

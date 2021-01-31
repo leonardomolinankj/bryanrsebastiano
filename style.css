@@ -545,6 +545,7 @@ aside .b-toggle-btn:hover {
 }
 #skills .b-heading {
   padding-left: 13px;
+  margin-bottom: 15px;
 }
 #skills .b-heading .b-section-title,
 #skills .b-heading p {
@@ -552,7 +553,10 @@ aside .b-toggle-btn:hover {
 }
 #skills .b-heading p {
   margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: 3px;
+  font-style: italic;
+  font-size: 14px;
+  color: #a7a7a7;
 }
 #skills hr {
   width: calc(100% - 13px);
@@ -560,6 +564,23 @@ aside .b-toggle-btn:hover {
 }
 #skills .b-tools .b-section-title i {
   left: 1px;
+}
+#skills .b-cap ul {
+  list-style: none;
+  margin-top: 0px;
+  padding-left: 55px;
+}
+#skills .b-cap ul li {
+  position: relative;
+  padding-left: 15px;
+  margin: 5px 0;
+}
+#skills .b-cap ul li i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 13px;
 }
 #skills .b-other .b-section-title i {
   left: 3px;

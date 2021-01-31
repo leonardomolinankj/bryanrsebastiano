@@ -3,6 +3,7 @@ import menu_data from './data/menu.js';
 import educ_data from './data/education.js';
 import achieve_data from './data/achievements.js';
 import exp_data from './data/experience.js';
+import skills_data from './data/skills.js';
 
 /* Create an app */
 var portfolio = new Vue( {
@@ -15,7 +16,8 @@ var portfolio = new Vue( {
       menu: menu_data,
       education: educ_data,
       achievements : achieve_data,
-      experience : exp_data
+      experience : exp_data,
+      skills : skills_data
     }
   },
   mounted: function() {
