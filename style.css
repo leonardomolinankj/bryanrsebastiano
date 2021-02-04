@@ -551,12 +551,34 @@ aside .b-toggle-btn:hover {
 #skills .b-heading p {
   padding-left: 30px;
 }
+@media (max-width: 767px) {
+  #skills .b-heading .b-section-title,
+#skills .b-heading p {
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  #skills .b-heading .b-section-title {
+    color: #39b5c1;
+  }
+  #skills .b-heading .b-section-title i {
+    display: none;
+  }
+}
 #skills .b-heading p {
   margin-bottom: 0;
   margin-top: 3px;
   font-style: italic;
   font-size: 14px;
   color: #a7a7a7;
+}
+#skills .b-data {
+  padding-left: 55px;
+}
+@media (max-width: 767px) {
+  #skills .b-data {
+    padding-left: 15px;
+  }
 }
 #skills hr {
   width: calc(100% - 13px);
@@ -565,21 +587,25 @@ aside .b-toggle-btn:hover {
 #skills .b-tools .b-section-title i {
   left: 1px;
 }
-#skills .b-cap ul {
+#skills .b-tools .b-data circle {
+  transition: 2s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+#skills .b-cap .b-data ul {
   list-style: none;
   margin-top: 0px;
-  padding-left: 55px;
+  padding-left: 0;
 }
-#skills .b-cap ul li {
+#skills .b-cap .b-data ul li {
   position: relative;
   padding-left: 15px;
-  margin: 5px 0;
+  margin: 10px 0;
 }
-#skills .b-cap ul li i {
+#skills .b-cap .b-data ul li i {
   position: absolute;
-  top: 50%;
+  top: 5px;
   left: 0;
-  transform: translateY(-50%);
   font-size: 13px;
 }
 #skills .b-other .b-section-title i {

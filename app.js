@@ -20,6 +20,9 @@ var portfolio = new Vue( {
       skills : skills_data
     }
   },
+  beforeMount: function() {
+
+  },
   mounted: function() {
     this.toggleMenu();
 
@@ -32,11 +35,62 @@ var portfolio = new Vue( {
         _this.toggleMenu();
       }, 250 );
     } );
+
+    this.setProgress( '-1', 0 ); // Initialize circle
+
+    /////////////////////// TEMP FOR TESTING
+    /**
+     * DYNAMIC VALUE
+     * skill.name = html
+     * skill.percent = 20
+     * skill.percent_interval = 23
+     */
+
+    /* Before the animation start */
+    // let _this = this;
+    setTimeout( function() {
+      _this.setProgress( 'html', 20 ); // Animation on circle
+
+      /* Animation on text */
+      let percent = 0;
+      let label = document.getElementById( 'html' );
+      let id = setInterval( function() {
+        if( percent >= 20 ) {
+          clearInterval( id );
+        } else {
+          percent++;
+          label.innerHTML = percent + '%';
+        }
+      }, 23 );
+    }, 1000 );
   },
   methods: {
     changeSection: function( section, event ) {
-      this.active_section = section;
       event.preventDefault();
+      this.active_section = section;
+
+      if( section == 'skills' ) {
+        /* Before the animation start */
+        let _this = this;
+        setTimeout( function() {
+          _this.setProgress( 'html', 20 ); // Animation on circle
+
+          /* Animation on text */
+          let percent = 0;
+          let label = document.getElementById( 'html' );
+          let id = setInterval( function() {
+            if( percent >= 20 ) {
+              clearInterval( id );
+            } else {
+              percent++;
+              label.innerHTML = percent + '%';
+            }
+          }, 23 );
+        }, 1000 );
+      } else {
+        this.setProgress( '-1', 0 ); // Reset all skill circle
+        document.querySelector( '.b-skill--label' ).innerHTML = '0%'; // Reset all skill label
+      }
     },
     toggleMenu: function() {
       if( window.innerWidth <= 991 ) {
@@ -44,6 +98,24 @@ var portfolio = new Vue( {
       } else {
         this.toggle_menu = false;
       }
+    },
+    setProgress: function( skills, percent ) {
+      let circle;
+      if( skills == '-1' ) { // All circle
+        circle = document.querySelector( '.b-skill--circle' );
+      } else { // Specific circle
+        circle = this.$refs[skills];
+      }
+
+      let radius = circle.r.baseVal.value;
+      let circumference = radius * 2 * Math.PI;
+
+      circle.style.strokeDasharray = `${circumference} ${circumference}`;
+      circle.style.strokeDashoffset = `${circumference}`;
+
+      const offset = circumference - percent / 100 * circumference;
+      circle.style.stroke = '#fff';
+      circle.style.strokeDashoffset = offset;
     }
   }
 } );

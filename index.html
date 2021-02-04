@@ -36,7 +36,7 @@
       </span>
     </aside>
     <transition-group name="fade" mode="out-in" appear :duration="500" >
-      <section id="about" :key="'about'" v-if="active_section == 'about'">
+      <section id="about" :key="'about'" v-show="active_section == 'about'">
         <h2>
           <lord-icon class="b-icon" :src="menu.about.icon" trigger="loop" delay="3000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
           <span>{{ menu.about.label }}</span>
@@ -82,7 +82,7 @@
           </div>
         </div>
       </section>
-      <section id="experience" :key="'experience'" v-if="active_section == 'experience'">
+      <section id="experience" :key="'experience'" v-show="active_section == 'experience'">
         <h2>
           <lord-icon class="b-icon" :src="menu.experience.icon" trigger="loop" delay="3000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
           <span>{{ menu.experience.label }}</span>
@@ -104,7 +104,7 @@
           </div>
         </div>
       </section>
-      <section id="skills" :key="'skills'" v-if="active_section == 'skills'">
+      <section id="skills" :key="'skills'" v-show="active_section == 'skills'">
         <h2>
           <lord-icon class="b-icon" :src="menu.skills.icon" trigger="loop" delay="3000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
           <span>{{ menu.skills.label }}</span>
@@ -115,7 +115,25 @@
               <h4 class="b-section-title"><i class="fas fa-tools"></i>DEVELOPMENT TOOLS</h4>
               <p>Different tools that I'm using on developing a project.</p>
             </div>
-            <pre>Box with vertical percent in left side. Number of years in bottom. Icon with name.</pre>
+            <div class="b-data">
+              <div class="b-skill">
+                <svg
+                  width="120"
+                  height="120">
+                  <!-- r = [ ( cx + cy ) / 2 ] - ( stroke-width * 2 ) -->
+                  <circle
+                    class="b-skill--circle"
+                    ref="html"
+                    stroke="transparent"
+                    stroke-width="4"
+                    fill="#000"
+                    r="52"
+                    cx="60"
+                    cy="60"/>
+                </svg>
+                <p id="html" class="b-skill--label">0%</p>
+              </div>
+            </div>
           </div>
           <hr>
           <div class="b-cap">
@@ -123,9 +141,11 @@
               <h4 class="b-section-title"><i class="fas fa-user-cog"></i>PERSONAL CAPABILITIES</h4>
               <p>Level of my skills on how I can manage a difficult tasks and multiple projects.</p>
             </div>
-            <ul>
-              <li v-for="cap in skills.capabilities"><i class="fas fa-chevron-right"></i>{{ cap }}</li>
-            </ul>
+            <div class="b-data">
+              <ul>
+                <li v-for="cap in skills.capabilities"><i class="fas fa-chevron-right"></i>{{ cap }}</li>
+              </ul>
+            </div>
           </div>
           <hr>
           <div class="b-other">
@@ -137,7 +157,7 @@
           </div>
         </div>
       </section>
-      <section id="masterpiece" :key="'masterpiece'" v-if="active_section == 'masterpiece'">
+      <section id="masterpiece" :key="'masterpiece'" v-show="active_section == 'masterpiece'">
         <h2>
           <lord-icon class="b-icon" :src="menu.masterpiece.icon" trigger="loop" delay="3000" colors="primary:#eaeaea,secondary:#39b5c1" style="width:55px;height:55px"></lord-icon>
           <span>{{ menu.masterpiece.label }}</span>
