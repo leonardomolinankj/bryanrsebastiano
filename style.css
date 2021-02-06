@@ -545,7 +545,7 @@ aside .b-toggle-btn:hover {
 }
 #skills .b-heading {
   padding-left: 13px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 #skills .b-heading .b-section-title,
 #skills .b-heading p {
@@ -574,11 +574,17 @@ aside .b-toggle-btn:hover {
 }
 #skills .b-data {
   padding-left: 55px;
+  display: flex;
+  flex-wrap: wrap;
 }
 @media (max-width: 767px) {
   #skills .b-data {
     padding-left: 15px;
   }
+}
+#skills .b-data .b-skill {
+  flex: 1 0 20%;
+  max-width: 208px;
 }
 #skills hr {
   width: calc(100% - 13px);
@@ -587,14 +593,52 @@ aside .b-toggle-btn:hover {
 #skills .b-tools .b-section-title i {
   left: 1px;
 }
-#skills .b-tools .b-data circle {
+#skills .b-tools .b-data {
+  padding-left: 0;
+}
+#skills .b-tools .b-data .b-skill {
+  margin: 15px 0;
+}
+#skills .b-tools .b-data .b-skill .b-logo {
+  position: relative;
+  margin-bottom: 10px;
+}
+#skills .b-tools .b-data .b-skill .b-logo svg {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+}
+#skills .b-tools .b-data .b-skill .b-logo svg circle {
   transition: 2s stroke-dashoffset;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
+  fill: #535353;
+}
+#skills .b-tools .b-data .b-skill .b-logo img {
+  width: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#skills .b-tools .b-data .b-skill h5 {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+}
+#skills .b-tools .b-data .b-skill p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
 }
 #skills .b-cap .b-data ul {
   list-style: none;
   margin-top: 0px;
+  margin-bottom: 0px;
   padding-left: 0;
 }
 #skills .b-cap .b-data ul li {

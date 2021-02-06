@@ -47,50 +47,51 @@ var portfolio = new Vue( {
      */
 
     /* Before the animation start */
-    // let _this = this;
-    setTimeout( function() {
-      _this.setProgress( 'html', 20 ); // Animation on circle
+    for( const key_name in skills_data.tools ) {
+      setTimeout( function() {
+        _this.setProgress( key_name, skills_data.tools[ key_name ].percent, skills_data.tools[ key_name ].color ); // Animation on circle
 
-      /* Animation on text */
-      let percent = 0;
-      let label = document.getElementById( 'html' );
-      let id = setInterval( function() {
-        if( percent >= 20 ) {
-          clearInterval( id );
-        } else {
-          percent++;
-          label.innerHTML = percent + '%';
-        }
-      }, 23 );
-    }, 1000 );
+        /* Animation on text */
+        let percent = 0;
+        let label = document.getElementById( key_name );
+        let id = setInterval( function() {
+          if( percent >= skills_data.tools[ key_name ].percent ) {
+            clearInterval( id );
+          } else {
+            percent++;
+            label.innerHTML = percent + '%';
+          }
+        }, 23 );
+      }, 1000 );
+    }
   },
   methods: {
     changeSection: function( section, event ) {
       event.preventDefault();
       this.active_section = section;
 
-      if( section == 'skills' ) {
-        /* Before the animation start */
-        let _this = this;
-        setTimeout( function() {
-          _this.setProgress( 'html', 20 ); // Animation on circle
+      // if( section == 'skills' ) {
+      //   /* Before the animation start */
+      //   let _this = this;
+      //   setTimeout( function() {
+      //     _this.setProgress( 'html', 20 ); // Animation on circle
 
-          /* Animation on text */
-          let percent = 0;
-          let label = document.getElementById( 'html' );
-          let id = setInterval( function() {
-            if( percent >= 20 ) {
-              clearInterval( id );
-            } else {
-              percent++;
-              label.innerHTML = percent + '%';
-            }
-          }, 23 );
-        }, 1000 );
-      } else {
-        this.setProgress( '-1', 0 ); // Reset all skill circle
-        document.querySelector( '.b-skill--label' ).innerHTML = '0%'; // Reset all skill label
-      }
+      //     /* Animation on text */
+      //     let percent = 0;
+      //     let label = document.getElementById( 'html' );
+      //     let id = setInterval( function() {
+      //       if( percent >= 20 ) {
+      //         clearInterval( id );
+      //       } else {
+      //         percent++;
+      //         label.innerHTML = percent + '%';
+      //       }
+      //     }, 23 );
+      //   }, 1000 );
+      // } else {
+      //   this.setProgress( '-1', 0 ); // Reset all skill circle
+      //   document.querySelector( '.b-skill--label' ).innerHTML = '0%'; // Reset all skill label
+      // }
     },
     toggleMenu: function() {
       if( window.innerWidth <= 991 ) {
@@ -99,12 +100,12 @@ var portfolio = new Vue( {
         this.toggle_menu = false;
       }
     },
-    setProgress: function( skills, percent ) {
+    setProgress: function( skills, percent, color ) {
       let circle;
       if( skills == '-1' ) { // All circle
         circle = document.querySelector( '.b-skill--circle' );
       } else { // Specific circle
-        circle = this.$refs[skills];
+        circle = this.$refs[skills][0];
       }
 
       let radius = circle.r.baseVal.value;
@@ -114,7 +115,7 @@ var portfolio = new Vue( {
       circle.style.strokeDashoffset = `${circumference}`;
 
       const offset = circumference - percent / 100 * circumference;
-      circle.style.stroke = '#fff';
+      circle.style.stroke = color;
       circle.style.strokeDashoffset = offset;
     }
   }

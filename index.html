@@ -116,22 +116,26 @@
               <p>Different tools that I'm using on developing a project.</p>
             </div>
             <div class="b-data">
-              <div class="b-skill">
-                <svg
-                  width="120"
-                  height="120">
-                  <!-- r = [ ( cx + cy ) / 2 ] - ( stroke-width * 2 ) -->
-                  <circle
-                    class="b-skill--circle"
-                    ref="html"
-                    stroke="transparent"
-                    stroke-width="4"
-                    fill="#000"
-                    r="52"
-                    cx="60"
-                    cy="60"/>
-                </svg>
-                <p id="html" class="b-skill--label">0%</p>
+              <div v-for="(skill_obj, skill_name) in skills.tools" class="b-skill">
+                <div class="b-logo">
+                  <svg
+                    width="120"
+                    height="120">
+                    <!-- r = [ ( cx + cy ) / 2 ] - ( stroke-width * 2 ) -->
+                    <circle
+                      class="b-skill--circle"
+                      :ref="skill_name"
+                      stroke="transparent"
+                      stroke-width="4"
+                      stroke-dashoffset="327"
+                      r="52"
+                      cx="60"
+                      cy="60"/>
+                  </svg>
+                  <img :src="skill_obj.img" :alt="skill_obj.title">
+                </div>
+                <h5>{{ skill_obj.title }}</h5>
+                <p :id="skill_name" class="b-skill--label">0%</p>
               </div>
             </div>
           </div>
