@@ -10,97 +10,115 @@ export default {
       "title" : "CSS",
       "img" : "/imgs/skill-logos/css3.svg",
       "percent" : "95",
-      "color" : "#fff"
+      "color" : "#39beff"
     },
     "sass" : {
       "title" : "SASS",
       "img" : "/imgs/skill-logos/sass.svg",
       "percent" : "85",
-      "color" : "#fff"
+      "color" : "#ff97ba"
     },
     "bootstrap" : {
       "title" : "Bootstrap",
-      "img" : "/imgs/skills/bootstrap.png",
+      "img" : "/imgs/skill-logos/bootstrap.svg",
       "percent" : "85",
-      "color" : "#fff"
+      "color" : "#c09cff"
     },
     "foundation" : {
       "title" : "Foundation",
-      "img" : "/imgs/skills/foundation.png",
+      "img" : "/imgs/skill-logos/foundation.svg",
       "percent" : "90",
-      "color" : "#fff"
+      "color" : "#76dfff"
     },
     "js" : {
       "title" : "JavaScript",
-      "img" : "/imgs/skills/javascript.png",
+      "img" : "/imgs/skill-logos/javascript.svg",
       "percent" : "75",
-      "color" : "#fff"
+      "color" : "#ffec87"
+    },
+    "json" : {
+      "title" : "JSON",
+      "img" : "/imgs/skill-logos/json.png",
+      "percent" : "85",
+      "color" : "#6fd1ff"
     },
     "mongodb" : {
       "title" : "MongoDB Atlas",
-      "img" : "/imgs/skills/mongodb.png",
+      "img" : "/imgs/skill-logos/mongodb.svg",
       "percent" : "80",
-      "color" : "#fff"
+      "color" : "#81c784"
     },
     "jquery" : {
       "title" : "jQuery",
-      "img" : "/imgs/skills/jquery.png",
+      "img" : "/imgs/skill-logos/jquery.png",
       "percent" : "90",
-      "color" : "#fff"
+      "color" : "#2d7cc6"
+    },
+    "npm" : {
+      "title" : "NPM",
+      "img" : "/imgs/skill-logos/npm.svg",
+      "percent" : "85",
+      "color" : "#dc3b3b"
     },
     "vuejs" : {
       "title" : "VueJS",
-      "img" : "/imgs/skills/vuejs.png",
+      "img" : "/imgs/skill-logos/vuejs.svg",
       "percent" : "75",
-      "color" : "#fff"
+      "color" : "#9dcc9f"
     },
     "nodejs" : {
       "title" : "NodeJS",
-      "img" : "/imgs/skills/nodejs.png",
+      "img" : "/imgs/skill-logos/nodejs.svg",
       "percent" : "80",
-      "color" : "#fff"
+      "color" : "#69b16c"
     },
     "expressjs" : {
       "title" : "ExpressJS",
-      "img" : "/imgs/skills/nodejs.png",
+      "img" : "/imgs/skill-logos/express.png",
       "percent" : "85",
-      "color" : "#fff"
+      "color" : "#c6c5c5"
     },
     "php" : {
       "title" : "PHP",
-      "img" : "/imgs/skills/php.png",
+      "img" : "/imgs/skill-logos/php.svg",
       "percent" : "95",
-      "color" : "#fff"
+      "color" : "#c4b3fb"
     },
     "mysql" : {
       "title" : "MySQL",
-      "img" : "/imgs/skills/mysql.png",
+      "img" : "/imgs/skill-logos/mysql.svg",
       "percent" : "85",
-      "color" : "#fff"
+      "color" : "#ffa82b"
     },
     "wordpress" : {
       "title" : "WordPress",
-      "img" : "/imgs/skills/wordpress.png",
+      "img" : "/imgs/skill-logos/wordpress.svg",
       "percent" : "95",
-      "color" : "#fff"
+      "color" : "#2c71a7"
     },
     "git" : {
       "title" : "Git",
-      "img" : "/imgs/skills/git.png",
+      "img" : "/imgs/skill-logos/git.svg",
       "percent" : "90",
-      "color" : "#fff"
+      "color" : "#f77e58"
     },
     "photoshop" : {
       "title" : "PhotoShop",
-      "img" : "/imgs/skills/photoshop.png",
+      "img" : "/imgs/skill-logos/photoshop.svg",
       "percent" : "75",
-      "color" : "#fff"
+      "color" : "#66e9ff"
+    },
+    "xd" : {
+      "title" : "Experience Design",
+      "img" : "/imgs/skill-logos/xd.svg",
+      "percent" : "50",
+      "color" : "#de73ff"
     },
     "linux" : {
       "title" : "Linux Server",
-      "img" : "/imgs/skills/linux.png",
+      "img" : "/imgs/skill-logos/linux.png",
       "percent" : "70",
-      "color" : "#fff"
+      "color" : "#ffd659"
     },
   },
   "capabilities" : {

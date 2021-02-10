@@ -11,10 +11,10 @@
   border-radius: 7px;
   margin: auto;
   font-size: 16px;
-  border: 1px solid $secodary-color;
+  border: 1px solid $secondary-color;
 }
 .b-btn-solid-dark {
-  background: $secodary-color;
+  background: $secondary-color;
   color: $medium-gray;
   @include transition;
   i {

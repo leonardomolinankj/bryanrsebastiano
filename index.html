@@ -110,6 +110,18 @@
           <span>{{ menu.skills.label }}</span>
         </h2>
         <div class="b-content">
+          <div class="b-cap">
+            <div class="b-heading">
+              <h4 class="b-section-title"><i class="fas fa-user-cog"></i>PERSONAL CAPABILITIES</h4>
+              <p>Level of my skills on how I can manage a difficult tasks and multiple projects.</p>
+            </div>
+            <div class="b-data">
+              <ul>
+                <li v-for="cap in skills.capabilities"><i class="fas fa-chevron-right"></i>{{ cap }}</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
           <div class="b-tools">
             <div class="b-heading">
               <h4 class="b-section-title"><i class="fas fa-tools"></i>DEVELOPMENT TOOLS</h4>
@@ -134,30 +146,10 @@
                   </svg>
                   <img :src="skill_obj.img" :alt="skill_obj.title">
                 </div>
-                <h5>{{ skill_obj.title }}</h5>
+                <h5 :style="{ color: skill_obj.color }">{{ skill_obj.title }}</h5>
                 <p :id="skill_name" class="b-skill--label">0%</p>
               </div>
             </div>
-          </div>
-          <hr>
-          <div class="b-cap">
-            <div class="b-heading">
-              <h4 class="b-section-title"><i class="fas fa-user-cog"></i>PERSONAL CAPABILITIES</h4>
-              <p>Level of my skills on how I can manage a difficult tasks and multiple projects.</p>
-            </div>
-            <div class="b-data">
-              <ul>
-                <li v-for="cap in skills.capabilities"><i class="fas fa-chevron-right"></i>{{ cap }}</li>
-              </ul>
-            </div>
-          </div>
-          <hr>
-          <div class="b-other">
-            <div class="b-heading">
-              <h4 class="b-section-title"><i class="fas fa-bookmark"></i>OTHER INTERESTS</h4>
-              <p>Skills that I've experienced for the short period of time but I have an interest to learn it.</p>
-            </div>
-            <pre>Circular logo of skills</pre>
           </div>
         </div>
       </section>

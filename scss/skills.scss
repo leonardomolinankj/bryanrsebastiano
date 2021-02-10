@@ -40,9 +40,26 @@
     @media ( max-width: $max-small ) {
       padding-left: 15px;
     }
+    @media ( max-width: 360px ) {
+      display: block;
+      flex-wrap: nowrap;
+    }
     .b-skill {
       flex: 1 0 20%;
       max-width: 208px;
+      @media ( max-width: 1050px ) {
+        flex: 1 0 25%;
+      }
+      @media ( max-width: 650px ) {
+        flex: 1 0 33.3%;
+      }
+      @media ( max-width: 500px ) {
+        flex: 1 0 50%;
+      }
+      @media ( max-width: 360px ) {
+        flex: none;
+        max-width: 100%;
+      }
     }
   }
   hr {
@@ -74,11 +91,12 @@
               // axis compensation
               transform: rotate(-90deg);
               transform-origin: 50% 50%;
-              fill: $medium-light-gray;
+              fill: $secondary-color;
             }
           }
           img {
             width: 60px;
+            height: 60px;
             position: absolute;
             left: 50%;
             top: 50%;

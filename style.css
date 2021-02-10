@@ -582,9 +582,36 @@ aside .b-toggle-btn:hover {
     padding-left: 15px;
   }
 }
+@media (max-width: 360px) {
+  #skills .b-data {
+    display: block;
+    flex-wrap: nowrap;
+  }
+}
 #skills .b-data .b-skill {
   flex: 1 0 20%;
   max-width: 208px;
+}
+@media (max-width: 1050px) {
+  #skills .b-data .b-skill {
+    flex: 1 0 25%;
+  }
+}
+@media (max-width: 650px) {
+  #skills .b-data .b-skill {
+    flex: 1 0 33.3%;
+  }
+}
+@media (max-width: 500px) {
+  #skills .b-data .b-skill {
+    flex: 1 0 50%;
+  }
+}
+@media (max-width: 360px) {
+  #skills .b-data .b-skill {
+    flex: none;
+    max-width: 100%;
+  }
 }
 #skills hr {
   width: calc(100% - 13px);
@@ -615,10 +642,11 @@ aside .b-toggle-btn:hover {
   transition: 2s stroke-dashoffset;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
-  fill: #535353;
+  fill: #272727;
 }
 #skills .b-tools .b-data .b-skill .b-logo img {
   width: 60px;
+  height: 60px;
   position: absolute;
   left: 50%;
   top: 50%;

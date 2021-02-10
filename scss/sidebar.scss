@@ -67,7 +67,7 @@ aside {
       }
       &:last-child {
         padding: 21px 20px;
-        background-color: $secodary-color;
+        background-color: $secondary-color;
         color: $medium-gray;
         @media ( max-width: $max-medium ) {
           background-color: $black;
@@ -103,7 +103,7 @@ aside {
     }
   }
   .b-toggle-btn {
-    background: $secodary-color;
+    background: $secondary-color;
     padding: 5px;
     border-radius: 2px;
     display: table;
