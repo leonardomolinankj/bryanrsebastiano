@@ -17,7 +17,8 @@ var portfolio = new Vue( {
       education: educ_data,
       achievements : achieve_data,
       experience : exp_data,
-      skills : skills_data
+      skills : skills_data,
+      loaded_skills : false
     }
   },
   beforeMount: function() {
@@ -35,63 +36,38 @@ var portfolio = new Vue( {
         _this.toggleMenu();
       }, 250 );
     } );
-
-    this.setProgress( '-1', 0 ); // Initialize circle
-
-    /////////////////////// TEMP FOR TESTING
-    /**
-     * DYNAMIC VALUE
-     * skill.name = html
-     * skill.percent = 20
-     * skill.percent_interval = 23
-     */
-
-    /* Before the animation start */
-    for( const key_name in skills_data.tools ) {
-      setTimeout( function() {
-        _this.setProgress( key_name, skills_data.tools[ key_name ].percent, skills_data.tools[ key_name ].color ); // Animation on circle
-
-        /* Animation on text */
-        let percent = 0;
-        let label = document.getElementById( key_name );
-        let id = setInterval( function() {
-          if( percent >= skills_data.tools[ key_name ].percent ) {
-            clearInterval( id );
-          } else {
-            percent++;
-            label.innerHTML = percent + '%';
-          }
-        }, 23 );
-      }, 1000 );
-    }
   },
   methods: {
     changeSection: function( section, event ) {
       event.preventDefault();
       this.active_section = section;
 
-      // if( section == 'skills' ) {
-      //   /* Before the animation start */
-      //   let _this = this;
-      //   setTimeout( function() {
-      //     _this.setProgress( 'html', 20 ); // Animation on circle
+      /* Load the animation once */
+      if( this.loaded_skills == false ) {
+        let _this = this;
 
-      //     /* Animation on text */
-      //     let percent = 0;
-      //     let label = document.getElementById( 'html' );
-      //     let id = setInterval( function() {
-      //       if( percent >= 20 ) {
-      //         clearInterval( id );
-      //       } else {
-      //         percent++;
-      //         label.innerHTML = percent + '%';
-      //       }
-      //     }, 23 );
-      //   }, 1000 );
-      // } else {
-      //   this.setProgress( '-1', 0 ); // Reset all skill circle
-      //   document.querySelector( '.b-skill--label' ).innerHTML = '0%'; // Reset all skill label
-      // }
+        /* Loop the Skills */
+        for( const key_name in skills_data.tools ) {
+          setTimeout( function() {
+            _this.setProgress( key_name, skills_data.tools[ key_name ].percent, skills_data.tools[ key_name ].color ); // Animation on circle
+
+            /* Animation on text */
+            let percent = 0;
+            let label = document.getElementById( key_name );
+            let id = setInterval( function() {
+              if( percent >= skills_data.tools[ key_name ].percent ) {
+                clearInterval( id );
+              } else {
+                percent++;
+                label.innerHTML = percent + '%';
+              }
+            }, 23 );
+          }, 1000 );
+        }
+
+        /* Change the status to avoid reloading of the animation */
+        this.loaded_skills = true;
+      }
     },
     toggleMenu: function() {
       if( window.innerWidth <= 991 ) {
