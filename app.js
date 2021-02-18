@@ -36,14 +36,42 @@ var portfolio = new Vue( {
         _this.toggleMenu();
       }, 250 );
     } );
+
+    /* Show the go to top buttom */
+    let go_to_top = this.$refs['go_top'];
+    window.addEventListener( 'scroll', function() {
+      if( document.documentElement.scrollTop > 50 ) {
+        /* Animate showing */
+        go_to_top.classList.add( 'show' );
+        setTimeout( function () {
+          go_to_top.classList.add( 'visually-show' );
+        }, 0 );
+      } else {
+        /* Animate hiding */
+        go_to_top.classList.remove( 'visually-show' );
+        setTimeout( function () {
+          go_to_top.classList.remove( 'show' );
+        }, 0 );
+      }
+    } );
   },
   methods: {
+    goToTop: function() {
+      window.scrollTo( {
+        top: 0,
+        behavior: 'smooth',
+      } )
+    },
     changeSection: function( section, event ) {
       event.preventDefault();
       this.active_section = section;
 
+      setTimeout( function() {
+        window.scrollTo(0,0);
+      }, 500 );
+
       /* Load the animation once */
-      if( this.loaded_skills == false ) {
+      if( this.loaded_skills == false && section == 'skills' ) {
         let _this = this;
 
         /* Loop the Skills */

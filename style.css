@@ -31,8 +31,8 @@ img {
 main {
   position: relative;
   padding-left: 300px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main.b-toggle {
   padding-left: 64px;
@@ -93,8 +93,8 @@ section h2 .b-icon {
 }
 
 .b-transition {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .b-btn {
@@ -110,13 +110,13 @@ section h2 .b-icon {
 .b-btn-solid-dark {
   background: #272727;
   color: #a7a7a7;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .b-btn-solid-dark i {
   color: #173032;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .b-btn-solid-dark:hover {
   color: #eaeaea;
@@ -177,6 +177,53 @@ section h2 .b-icon {
   transition-delay: 100ms;
 }
 
+.b-go-top {
+  display: none;
+  opacity: 0;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #39b5c1;
+  padding: 12px 15px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .b-go-top {
+    right: 10px;
+    bottom: 10px;
+    padding: 8px 11px;
+  }
+}
+.b-go-top:hover {
+  background: #244a4c;
+}
+.b-go-top:hover i {
+  color: #39b5c1;
+}
+.b-go-top.show {
+  display: block;
+}
+.b-go-top.visually-show {
+  opacity: 1;
+}
+.b-go-top i {
+  font-size: 24px;
+  color: #272727;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .b-go-top i {
+    font-size: 18px;
+  }
+}
+
 aside {
   z-index: 1;
   position: fixed;
@@ -190,8 +237,8 @@ aside {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media (max-width: 767px) {
   aside {
@@ -201,8 +248,8 @@ aside {
 }
 aside .b-image {
   padding: 20px 20px 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 aside .b-image img {
   border-radius: 50%;
@@ -214,8 +261,8 @@ aside .b-image img {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media (max-width: 767px) {
   aside .b-image img {
@@ -226,8 +273,8 @@ aside .b-image h1 {
   color: #1f1f1f;
   font-size: 30px;
   margin: 20px 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media (max-width: 767px) {
   aside .b-image h1 {
@@ -245,8 +292,8 @@ aside .b-menu a {
   line-height: 1;
   letter-spacing: 1px;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 aside .b-menu a.b-active, aside .b-menu a:hover {
   background: #255154;
@@ -288,13 +335,13 @@ aside .b-menu a .b-icon {
 }
 aside .b-menu a span {
   font-size: 16px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 aside .b-menu a i {
   margin-right: 5px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 aside .b-toggle-btn {
   background: #272727;
@@ -305,8 +352,8 @@ aside .b-toggle-btn {
   margin-right: 10px;
   margin-top: 10px;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 aside .b-toggle-btn:hover {
   background: #1f1f1f;
@@ -360,7 +407,7 @@ aside .b-toggle-btn:hover {
   width: calc(100% - 13px);
 }
 #about .b-content {
-  padding-left: 15px;
+  padding: 0 15px;
 }
 @media (max-width: 1200px) {
   #about .b-content .b-row {
