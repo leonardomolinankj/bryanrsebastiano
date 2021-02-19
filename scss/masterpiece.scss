@@ -7,4 +7,111 @@
       width: calc(100% - 6px);
     }
   }
+  .b-projects {
+    padding-left: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .b-project {
+      flex: 1 0 25%;
+      max-width: 259px;
+      padding: 0 5px;
+      margin-bottom: 10px;
+      @media ( max-width: $max-large ) and ( min-width: $min-medium ), ( max-width: 850px ) {
+        flex: 1 0 50%;
+        max-width: 287px;
+      }
+      @media ( max-width: 991px ) {
+        max-width: 272px;
+      }
+      > div {
+        width: 100%;
+        height: auto;
+        border: 2px solid #828282;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        &.b-down {
+          a {
+            cursor: not-allowed;
+          }
+          .info {
+            .b-status {
+              i {
+                background: $error;
+              }
+            }
+          }
+        }
+        .info {
+          h3 {
+            margin-top: 0;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background: $black;
+            color: $white;
+            font-weight: 400;
+            letter-spacing: 1px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            @media ( max-width: 900px ) {
+              font-size: 14px;
+            }
+          }
+          p {
+            padding: 0;
+            margin: 0;
+            text-align: initial;
+            font-style: normal;
+            color: $white;
+            &:first-of-type {
+              margin-top: 10px;
+              padding-left: 15px;
+              font-weight: 700;
+            }
+            &:last-of-type {
+              margin-top: 5px;
+              padding-left: 20px;
+              display: flex;
+              flex-wrap: wrap;
+              span {
+                flex: 1 0 50%;
+                white-space: nowrap;
+                position: relative;
+                padding-left: 10px;
+                i {
+                  font-size: 5px;
+                  position: absolute;
+                  left: 0;
+                  transform: translateY(-50%);
+                  top: 50%;
+                }
+              }
+            }
+          }
+          .b-status {
+            position: absolute;
+            color: $light-gray;
+            font-size: 9px;
+            right: 5px;
+            bottom: 5px;
+            letter-spacing: 1px;
+            i {
+              display: inline-block;
+              vertical-align: top;
+              margin-top: 1.1px;
+              margin-right: 3px;
+              width: 8px;
+              height: 8px;
+              background: $success;
+              border-radius: 50%;
+              border: 1px solid $light-gray;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -335,8 +335,6 @@ aside .b-menu a .b-icon {
 }
 aside .b-menu a span {
   font-size: 16px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 aside .b-menu a i {
   margin-right: 5px;
@@ -738,6 +736,111 @@ aside .b-toggle-btn:hover {
 }
 #masterpiece h2:after {
   width: calc(100% - 6px);
+}
+#masterpiece .b-projects {
+  padding-left: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#masterpiece .b-projects .b-project {
+  flex: 1 0 25%;
+  max-width: 259px;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1200px) and (min-width: 991px), (max-width: 850px) {
+  #masterpiece .b-projects .b-project {
+    flex: 1 0 50%;
+    max-width: 287px;
+  }
+}
+@media (max-width: 991px) {
+  #masterpiece .b-projects .b-project {
+    max-width: 272px;
+  }
+}
+#masterpiece .b-projects .b-project > div {
+  width: 100%;
+  height: auto;
+  border: 2px solid #828282;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+#masterpiece .b-projects .b-project > div.b-down a {
+  cursor: not-allowed;
+}
+#masterpiece .b-projects .b-project > div.b-down .info .b-status i {
+  background: #f44336;
+}
+#masterpiece .b-projects .b-project > div .info h3 {
+  margin-top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #1f1f1f;
+  color: #eaeaea;
+  font-weight: 400;
+  letter-spacing: 1px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 900px) {
+  #masterpiece .b-projects .b-project > div .info h3 {
+    font-size: 14px;
+  }
+}
+#masterpiece .b-projects .b-project > div .info p {
+  padding: 0;
+  margin: 0;
+  text-align: initial;
+  font-style: normal;
+  color: #eaeaea;
+}
+#masterpiece .b-projects .b-project > div .info p:first-of-type {
+  margin-top: 10px;
+  padding-left: 15px;
+  font-weight: 700;
+}
+#masterpiece .b-projects .b-project > div .info p:last-of-type {
+  margin-top: 5px;
+  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#masterpiece .b-projects .b-project > div .info p:last-of-type span {
+  flex: 1 0 50%;
+  white-space: nowrap;
+  position: relative;
+  padding-left: 10px;
+}
+#masterpiece .b-projects .b-project > div .info p:last-of-type span i {
+  font-size: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+}
+#masterpiece .b-projects .b-project > div .info .b-status {
+  position: absolute;
+  color: #d8d8d8;
+  font-size: 9px;
+  right: 5px;
+  bottom: 5px;
+  letter-spacing: 1px;
+}
+#masterpiece .b-projects .b-project > div .info .b-status i {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1.1px;
+  margin-right: 3px;
+  width: 8px;
+  height: 8px;
+  background: #4caf50;
+  border-radius: 50%;
+  border: 1px solid #d8d8d8;
 }
 
 /*# sourceMappingURL=style.css.map */
