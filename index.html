@@ -160,110 +160,15 @@
           <span>{{ menu.masterpiece.label }}</span>
         </h2>
         <div class="b-projects">
-          <div class="b-project">
-            <div class="ih-item square effect6 from_top_and_bottom b-down">
-              <a href="javascript:void(0)">
-                <div class="img"><img src="https://gudh.github.io/ihover/dist/images/assets/rect/1.jpg" alt="img"></div>
+          <div v-for="item in masterpiece" class="b-project">
+            <div :class="'ih-item square effect6 from_top_and_bottom b-' + item.status">
+              <a :href="item.status == 'live' ? item.link : 'javascript:void(0)'" target="_blank">
+                <div class="img"><img :src="item.img" :alt="item.title"></div>
                 <div class="info">
-                  <span class="b-status"><i></i>DOWN</span>
-                  <h3>Heading here</h3>
+                  <span class="b-status"><i></i>{{ item.status }}</span>
+                  <h3>{{ item.title }}</h3>
                   <p>DEVELOPMENT TOOLS:</p>
-                  <p>
-                    <span><i class="fas fa-circle"></i> WordPress</span>
-                    <span><i class="fas fa-circle"></i> Foundation</span>
-                    <span><i class="fas fa-circle"></i> jQuery</span>
-                    <span><i class="fas fa-circle"></i> VueJS</span>
-                    <span><i class="fas fa-circle"></i> jQuery</span>
-                    <span><i class="fas fa-circle"></i> VueJS</span>
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="b-project">
-            <div class="ih-item square effect6 from_top_and_bottom">
-              <a href="#" target="_blank">
-                <div class="img"><img src="https://gudh.github.io/ihover/dist/images/assets/rect/1.jpg" alt="img"></div>
-                <div class="info">
-                  <span class="b-status"><i></i>LIVE</span>
-                  <h3>Heading here</h3>
-                  <p>DEVELOPMENT TOOLS:</p>
-                  <p>
-                    <span><i class="fas fa-circle"></i> WordPress</span>
-                    <span><i class="fas fa-circle"></i> Foundation</span>
-                    <span><i class="fas fa-circle"></i> jQuery</span>
-                    <span><i class="fas fa-circle"></i> VueJS</span>
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="b-project">
-            <div class="ih-item square effect6 from_top_and_bottom">
-              <a href="#" target="_blank">
-                <div class="img"><img src="https://gudh.github.io/ihover/dist/images/assets/rect/1.jpg" alt="img"></div>
-                <div class="info">
-                  <span class="b-status"><i></i>LIVE</span>
-                  <h3>Heading here</h3>
-                  <p>DEVELOPMENT TOOLS:</p>
-                  <p>
-                    <span><i class="fas fa-circle"></i> WordPress</span>
-                    <span><i class="fas fa-circle"></i> Foundation</span>
-                    <span><i class="fas fa-circle"></i> jQuery</span>
-                    <span><i class="fas fa-circle"></i> VueJS</span>
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="b-project">
-            <div class="ih-item square effect6 from_top_and_bottom">
-              <a href="#" target="_blank">
-                <div class="img"><img src="https://gudh.github.io/ihover/dist/images/assets/rect/1.jpg" alt="img"></div>
-                <div class="info">
-                  <span class="b-status"><i></i>LIVE</span>
-                  <h3>Heading here</h3>
-                  <p>DEVELOPMENT TOOLS:</p>
-                  <p>
-                    <span><i class="fas fa-circle"></i> WordPress</span>
-                    <span><i class="fas fa-circle"></i> Foundation</span>
-                    <span><i class="fas fa-circle"></i> jQuery</span>
-                    <span><i class="fas fa-circle"></i> VueJS</span>
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="b-project">
-            <div class="ih-item square effect6 from_top_and_bottom">
-              <a href="#" target="_blank">
-                <div class="img"><img src="https://gudh.github.io/ihover/dist/images/assets/rect/1.jpg" alt="img"></div>
-                <div class="info">
-                  <span class="b-status"><i></i>LIVE</span>
-                  <h3>Heading here</h3>
-                  <p>
-                    <span><i class="fas fa-circle"></i> WordPress</span>
-                    <span><i class="fas fa-circle"></i> Foundation</span>
-                    <span><i class="fas fa-circle"></i> jQuery</span>
-                    <span><i class="fas fa-circle"></i> VueJS</span>
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="b-project">
-            <div class="ih-item square effect6 from_top_and_bottom">
-              <a href="#" target="_blank">
-                <div class="img"><img src="https://gudh.github.io/ihover/dist/images/assets/rect/1.jpg" alt="img"></div>
-                <div class="info">
-                  <span class="b-status"><i></i>LIVE</span>
-                  <h3>Heading here</h3>
-                  <p>
-                    <span><i class="fas fa-circle"></i> WordPress</span>
-                    <span><i class="fas fa-circle"></i> Foundation</span>
-                    <span><i class="fas fa-circle"></i> jQuery</span>
-                    <span><i class="fas fa-circle"></i> VueJS</span>
-                  </p>
+                  <p><span v-for="tool in item.tools"><i class="fas fa-circle"></i> {{ tool }}</span></p>
                 </div>
               </a>
             </div>

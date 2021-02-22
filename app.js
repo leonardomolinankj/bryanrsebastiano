@@ -4,6 +4,7 @@ import educ_data from './data/education.js';
 import achieve_data from './data/achievements.js';
 import exp_data from './data/experience.js';
 import skills_data from './data/skills.js';
+import masterpiece_data from './data/masterpiece.js';
 
 /* Create an app */
 var portfolio = new Vue( {
@@ -11,13 +12,14 @@ var portfolio = new Vue( {
   data: function() {
     return {
       toggle_menu: false,
-      active_section: 'masterpiece',
+      active_section: 'about',
       resume_link: 'https://drive.google.com/file/d/11uQv_W9xfrh65EMpEpRN27jk6VQt1h45/view?usp=sharing',
       menu: menu_data,
       education: educ_data,
       achievements : achieve_data,
       experience : exp_data,
       skills : skills_data,
+      masterpiece : masterpiece_data,
       loaded_skills : false
     }
   },

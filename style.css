@@ -31,8 +31,8 @@ img {
 main {
   position: relative;
   padding-left: 300px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.b-toggle {
   padding-left: 64px;
@@ -93,8 +93,8 @@ section h2 .b-icon {
 }
 
 .b-transition {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .b-btn {
@@ -110,13 +110,13 @@ section h2 .b-icon {
 .b-btn-solid-dark {
   background: #272727;
   color: #a7a7a7;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .b-btn-solid-dark i {
   color: #173032;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .b-btn-solid-dark:hover {
   color: #eaeaea;
@@ -190,8 +190,8 @@ section h2 .b-icon {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 767px) {
   .b-go-top {
@@ -215,8 +215,8 @@ section h2 .b-icon {
 .b-go-top i {
   font-size: 24px;
   color: #272727;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 767px) {
   .b-go-top i {
@@ -237,8 +237,8 @@ aside {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 767px) {
   aside {
@@ -248,8 +248,8 @@ aside {
 }
 aside .b-image {
   padding: 20px 20px 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 aside .b-image img {
   border-radius: 50%;
@@ -261,8 +261,8 @@ aside .b-image img {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 767px) {
   aside .b-image img {
@@ -273,8 +273,8 @@ aside .b-image h1 {
   color: #1f1f1f;
   font-size: 30px;
   margin: 20px 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 767px) {
   aside .b-image h1 {
@@ -292,8 +292,8 @@ aside .b-menu a {
   line-height: 1;
   letter-spacing: 1px;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 aside .b-menu a.b-active, aside .b-menu a:hover {
   background: #255154;
@@ -338,8 +338,8 @@ aside .b-menu a span {
 }
 aside .b-menu a i {
   margin-right: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 aside .b-toggle-btn {
   background: #272727;
@@ -350,8 +350,8 @@ aside .b-toggle-btn {
   margin-right: 10px;
   margin-top: 10px;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 aside .b-toggle-btn:hover {
   background: #1f1f1f;
@@ -769,11 +769,20 @@ aside .b-toggle-btn:hover {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
-#masterpiece .b-projects .b-project > div.b-down a {
+#masterpiece .b-projects .b-project > div.b-down a, #masterpiece .b-projects .b-project > div.b-private a {
   cursor: not-allowed;
 }
-#masterpiece .b-projects .b-project > div.b-down .info .b-status i {
-  background: #f44336;
+#masterpiece .b-projects .b-project > div.b-down .b-status i {
+  background: #f44336 !important;
+}
+#masterpiece .b-projects .b-project > div.b-private .b-status i {
+  background: #e5c219 !important;
+}
+#masterpiece .b-projects .b-project > div a {
+  line-height: 0;
+}
+#masterpiece .b-projects .b-project > div .info {
+  line-height: 1;
 }
 #masterpiece .b-projects .b-project > div .info h3 {
   margin-top: 0;
@@ -830,6 +839,7 @@ aside .b-toggle-btn:hover {
   right: 5px;
   bottom: 5px;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 #masterpiece .b-projects .b-project > div .info .b-status i {
   display: inline-block;

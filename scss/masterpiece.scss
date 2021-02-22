@@ -32,19 +32,23 @@
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
         -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-        &.b-down {
+        &.b-down,
+        &.b-private {
           a {
             cursor: not-allowed;
           }
-          .info {
-            .b-status {
-              i {
-                background: $error;
-              }
-            }
-          }
+        }
+        &.b-down .b-status i {
+          background: $error !important;
+        }
+        &.b-private .b-status i {
+          background: $yellow !important;
+        }
+        a {
+          line-height: 0;
         }
         .info {
+          line-height: 1;
           h3 {
             margin-top: 0;
             padding-top: 15px;
@@ -98,6 +102,7 @@
             right: 5px;
             bottom: 5px;
             letter-spacing: 1px;
+            text-transform: uppercase;
             i {
               display: inline-block;
               vertical-align: top;
