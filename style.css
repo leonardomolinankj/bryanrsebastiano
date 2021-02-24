@@ -783,6 +783,7 @@ aside .b-toggle-btn:hover {
 }
 #masterpiece .b-projects .b-project > div .info {
   line-height: 1;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 #masterpiece .b-projects .b-project > div .info h3 {
   margin-top: 0;
@@ -814,7 +815,7 @@ aside .b-toggle-btn:hover {
   font-weight: 700;
 }
 #masterpiece .b-projects .b-project > div .info p:last-of-type {
-  margin-top: 5px;
+  margin-top: 7px;
   padding-left: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -824,6 +825,7 @@ aside .b-toggle-btn:hover {
   white-space: nowrap;
   position: relative;
   padding-left: 10px;
+  margin-bottom: 5px;
 }
 #masterpiece .b-projects .b-project > div .info p:last-of-type span i {
   font-size: 5px;
@@ -844,7 +846,6 @@ aside .b-toggle-btn:hover {
 #masterpiece .b-projects .b-project > div .info .b-status i {
   display: inline-block;
   vertical-align: top;
-  margin-top: 1.1px;
   margin-right: 3px;
   width: 8px;
   height: 8px;
