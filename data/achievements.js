@@ -1,5 +1,10 @@
 export default [
   {
+    "title" : "Conducted seminar entitled 'Cutting the Edge for Technological Advancement'",
+    "org" : "STI College - Malolos, September 26, 2019",
+    "add" : "Mac Arthur Highway, Barangay Dakila City of Malolos, Bulacan"
+  },
+  {
     "title" : "Conducted seminar entitled 'Advanced Wordpress Theme Development & Primer on Laravel'",
     "org" : "iConcept Global Advertising Inc., May 19, 2018",
     "add" : "Units 2-5 Happiness Pavilion, McArthur Highway, City of Malolos, Bulacan, Philippines 3000"

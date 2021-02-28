@@ -6,6 +6,11 @@ import exp_data from './data/experience.js';
 import skills_data from './data/skills.js';
 import masterpiece_data from './data/masterpiece.js';
 
+/* Remove loader after loading the page */
+window.addEventListener( 'load', function() {
+  document.querySelector( 'body' ).classList.remove( 'b-loading' )
+} );
+
 /* Create an app */
 var portfolio = new Vue( {
   el: '#portfolio',

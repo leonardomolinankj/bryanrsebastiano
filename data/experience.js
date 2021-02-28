@@ -26,7 +26,7 @@ export default [
   {
     "year" : "July 23, 2018 – May 31, 2019",
     "company" : "Castle Jackson",
-    "position" : "Web Developer",
+    "position" : "Mid Web Developer",
     "address" : "Unit 1/25A Mollison St Abbotsford Vic 3067",
     "details" : [
       "Develop a new website using WordPress CMS with BeTheme and Elegant Theme",
@@ -38,7 +38,7 @@ export default [
   {
     "year" : "May 18, 2015 – July 20, 2018",
     "company" : "iConcept Global Advertising Inc.",
-    "position" : "Web Developer",
+    "position" : "Junior 1 Web Developer",
     "address" : "Units 2-5 Happiness Pavilion, McArthur Highway, City of Malolos, Bulacan, Philippines 3000",
     "details" : [
       "Develop a website using WordPress CMS from scratch using underscores along with Beaver Builder",
