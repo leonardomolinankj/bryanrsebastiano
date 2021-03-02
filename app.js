@@ -18,7 +18,7 @@ var portfolio = new Vue( {
     return {
       toggle_menu: false,
       active_section: 'about',
-      resume_link: 'https://drive.google.com/file/d/11uQv_W9xfrh65EMpEpRN27jk6VQt1h45/view?usp=sharing',
+      resume_link: 'https://drive.google.com/file/d/1xuOYiPVBDcoD6KNJ8meZsnUcouoCC53t/view?usp=sharing',
       menu: menu_data,
       education: educ_data,
       achievements : achieve_data,
